@@ -1,12 +1,12 @@
 package niteroomcreation.id.retrofit_rxjava_demo.adapter;
 
 import android.content.Context;
+import android.support.design.widget.Snackbar;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.List;
 
@@ -72,7 +72,7 @@ public class AdapterCoupon extends RecyclerView.Adapter<AdapterCoupon.ItemViewHo
 
         @Override
         public void onClick(View view) {
-            Toast.makeText(context, "", Toast.LENGTH_SHORT).show();
+            Snackbar.make(view, "" + models.get(getAdapterPosition()).getCoupon(), Snackbar.LENGTH_LONG).show();
         }
     }
 }
